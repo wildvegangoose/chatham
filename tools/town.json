@@ -1,0 +1,245 @@
+{
+  "_comment": "Everything town-specific that the data tools need. Copy this file and edit it to build the same site for another town. See docs/PLAYBOOK.md.",
+  "name": "Chatham",
+  "state": "NJ",
+  "site_title": "Chatham Through Time",
+  "site_url": "https://wildvegangoose.github.io/chatham/",
+  "google_site_verification": "8tSS2sueBbS_W7_WUyu-CWWMZ3m-5kwgsyi2gflNa74",
+  "cloudflare_beacon_token": "03a9b2df20a44828802f80f6401c4ec3",
+  "og_image": "img/landmarks/station.jpg",
+  "og_image_alt": "1914 Delaware, Lackawanna & Western Railroad Station, Chatham, New Jersey",
+  "user_agent": "ChathamThroughTime-fansite-research/0.1 (personal, non-commercial; polite crawl)",
+  "bbox": {
+    "west": -74.4552,
+    "south": 40.6880,
+    "east": -74.3648,
+    "north": 40.7716
+  },
+  "map_bbox": {
+    "_comment": "Covers today's Chathams (Borough + Township) plus the 1806-1899 Chatham Township (Madison and Florham Park), so historic era outlines sit cleanly on aligned USGS maps.",
+    "west": -74.465,
+    "south": 40.682,
+    "east": -74.350,
+    "north": 40.805
+  },
+  "digifind": {
+    "_comment": "Library of the Chathams Digifind-IT archive: id=2 is the Chatham Courier (1946-2025). Pre-1950 issues (1946-1950) are indexed for street/house newspaper clippings.",
+    "slug": "chatham",
+    "city_directories_id": 1,
+    "realestate_id": null,
+    "realestate_street_id_range": [
+      0,
+      0
+    ],
+    "scrapbooks_id": 2
+  },
+  "directories": {
+    "_comment": "Name cutoff strictly enforced at 1950 for resident privacy.",
+    "codes": {
+      "C": "Chatham"
+    },
+    "years": [],
+    "crop_years": [],
+    "name_cutoff_year": 1950,
+    "not_surnames": [
+      "Chatham",
+      "Madison",
+      "Summit",
+      "Main",
+      "Street",
+      "Avenue",
+      "Road",
+      "Place",
+      "Terrace",
+      "Mrs",
+      "Miss",
+      "Rev",
+      "Dr"
+    ]
+  },
+  "topo_layers": {
+    "_comment": "USGS historical topo GeoTIFFs covering map_bbox (-74.465.. -74.350, 40.682.. 40.805). 1:62,500 maps need Plainfield + Morristown; 1:24,000 maps need Chatham, Morristown, Roselle & Caldwell.",
+    "topo1888": {
+      "res": 4,
+      "quads": [
+        [
+          "NJ/NJ_Plainfield_255320_1888_62500_geo.tif",
+          -74.5,
+          40.5,
+          -74.25,
+          40.75
+        ],
+        [
+          "NJ/NJ_Morristown_255268_1888_62500_geo.tif",
+          -74.5,
+          40.75,
+          -74.25,
+          41.0
+        ]
+      ]
+    },
+    "topo1898": {
+      "res": 4,
+      "quads": [
+        [
+          "NJ/NJ_Plainfield_255322_1898_62500_geo.tif",
+          -74.5,
+          40.5,
+          -74.25,
+          40.75
+        ],
+        [
+          "NJ/NJ_Morristown_255270_1898_62500_geo.tif",
+          -74.5,
+          40.75,
+          -74.25,
+          41.0
+        ]
+      ]
+    },
+    "topo1906": {
+      "res": 4,
+      "quads": [
+        [
+          "NJ/NJ_Plainfield_255325_1905_62500_geo.tif",
+          -74.5,
+          40.5,
+          -74.25,
+          40.75
+        ],
+        [
+          "NJ/NJ_Morristown_255272_1906_62500_geo.tif",
+          -74.5,
+          40.75,
+          -74.25,
+          41.0
+        ]
+      ]
+    },
+    "topo1921": {
+      "res": 4,
+      "quads": [
+        [
+          "NJ/NJ_Plainfield_255330_1921_62500_geo.tif",
+          -74.5,
+          40.5,
+          -74.25,
+          40.75
+        ],
+        [
+          "NJ/NJ_Morristown_472450_1906_62500_geo.tif",
+          -74.5,
+          40.75,
+          -74.25,
+          41.0
+        ]
+      ]
+    },
+    "topo1947": {
+      "res": 2.5,
+      "quads": [
+        [
+          "NJ/NJ_Chatham_254268_1947_24000_geo.tif",
+          -74.5,
+          40.625,
+          -74.375,
+          40.75
+        ],
+        [
+          "NJ/NJ_Morristown_254600_1947_24000_geo.tif",
+          -74.5,
+          40.75,
+          -74.375,
+          40.875
+        ],
+        [
+          "NJ/NJ_Roselle_254837_1947_24000_geo.tif",
+          -74.375,
+          40.625,
+          -74.25,
+          40.75
+        ],
+        [
+          "NJ/NJ_Caldwell_254218_1947_24000_geo.tif",
+          -74.375,
+          40.75,
+          -74.25,
+          40.875
+        ]
+      ]
+    },
+    "topo1955": {
+      "res": 2.5,
+      "quads": [
+        [
+          "NJ/NJ_Chatham_254269_1955_24000_geo.tif",
+          -74.5,
+          40.625,
+          -74.375,
+          40.75
+        ],
+        [
+          "NJ/NJ_Morristown_254602_1954_24000_geo.tif",
+          -74.5,
+          40.75,
+          -74.375,
+          40.875
+        ],
+        [
+          "NJ/NJ_Roselle_254838_1955_24000_geo.tif",
+          -74.375,
+          40.625,
+          -74.25,
+          40.75
+        ],
+        [
+          "NJ/NJ_Caldwell_254220_1954_24000_geo.tif",
+          -74.375,
+          40.75,
+          -74.25,
+          40.875
+        ]
+      ]
+    },
+    "topo1981": {
+      "res": 2.5,
+      "quads": [
+        [
+          "NJ/NJ_Chatham_254273_1955_24000_geo.tif",
+          -74.5,
+          40.625,
+          -74.375,
+          40.75
+        ],
+        [
+          "NJ/NJ_Morristown_254605_1954_24000_geo.tif",
+          -74.5,
+          40.75,
+          -74.375,
+          40.875
+        ],
+        [
+          "NJ/NJ_Roselle_254842_1955_24000_geo.tif",
+          -74.375,
+          40.625,
+          -74.25,
+          40.75
+        ],
+        [
+          "NJ/NJ_Caldwell_254223_1954_24000_geo.tif",
+          -74.375,
+          40.75,
+          -74.25,
+          40.875
+        ]
+      ]
+    },
+    "_editions": "Verified via map collars: Chatham 254269 & Morristown 254602 are original 1954-55 editions; Chatham 254273 & Morristown 254605 are 1981 photorevisions compiled from 1976 aerial photographs."
+  },
+  "nj_aerials": [
+    "BlackWhite1930",
+    "Infrared1995",
+    "Natural2007",
+    "Natural2020"
+  ]
+}

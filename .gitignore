@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+# working files of the archive pipeline
+/archive/_tmp/
+/archive/realestate/**/*.pdf

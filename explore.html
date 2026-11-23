@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Historic Maps of Chatham, NJ (1888–2020) · Chatham Through Time</title>
+  <meta name="description" content="Compare 1888–1981 USGS survey maps, 1930–2020 aerial photos, historic boundaries and 61 documented places in Chatham Borough &amp; Chatham Township, NJ.">
+  <!-- seo:head:start -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wildvegangoose.github.io/chatham/explore.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chatham Through Time">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Interactive Historic Maps of Chatham, NJ (1888–2020) · Chatham Through Time">
+  <meta property="og:description" content="Compare 1888–1981 USGS survey maps, 1930–2020 aerial photos, historic boundaries and 61 documented places in Chatham Borough &amp; Chatham Township, NJ.">
+  <meta property="og:url" content="https://wildvegangoose.github.io/chatham/explore.html">
+  <meta property="og:image" content="https://wildvegangoose.github.io/chatham/img/landmarks/station.jpg">
+  <meta property="og:image:alt" content="1914 Delaware, Lackawanna &amp; Western Railroad Station, Chatham, New Jersey">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interactive Historic Maps of Chatham, NJ (1888–2020) · Chatham Through Time">
+  <meta name="twitter:description" content="Compare 1888–1981 USGS survey maps, 1930–2020 aerial photos, historic boundaries and 61 documented places in Chatham Borough &amp; Chatham Township, NJ.">
+  <meta name="twitter:image" content="https://wildvegangoose.github.io/chatham/img/landmarks/station.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Interactive Historic Maps of Chatham, NJ (1888–2020) · Chatham Through Time","url":"https://wildvegangoose.github.io/chatham/explore.html","applicationCategory":"ReferenceApplication","operatingSystem":"All","description":"Compare 1888–1981 USGS survey maps, 1930–2020 aerial photos, historic boundaries and 61 documented places in Chatham Borough & Chatham Township, NJ."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Chatham Through Time","item":"https://wildvegangoose.github.io/chatham/"},{"@type":"ListItem","position":2,"name":"Explore the Map","item":"https://wildvegangoose.github.io/chatham/explore.html"}]}]}</script>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"03a9b2df20a44828802f80f6401c4ec3"}'></script><!-- End Cloudflare Web Analytics -->
+  <!-- seo:head:end -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/explore.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23b8381e' d='M50 4l8 20 14-8-4 20 18-4-10 16 16 6-20 10 4 10-22-4-2 26h-4l-2-26-22 4 4-10-20-10 16-6-10-16 18 4-4-20 14 8z'/%3E%3C/svg%3E">
+</head>
+<body class="explore-page">
+<main class="explore">
+  <aside class="side">
+    <div class="side-head">
+      <div class="eyebrow">Explore the map</div>
+      <h1><span id="townName">The Chathams</span> in <span id="bigYear">1921</span></h1>
+      <p class="town-sub small" id="townSub"></p>
+      <p class="muted small" id="eraLine"></p>
+    </div>
+    <div id="slider" class="side-slider"></div>
+    <form id="addrForm" class="addr" action="house.html">
+      <input type="search" name="q" placeholder="Search a Chatham Borough or Township address…" aria-label="Search a Chatham address">
+      <button class="btn" type="submit" aria-label="Tell this address's story">→</button>
+    </form>
+    <div class="jurbox" id="jurBox" aria-live="polite"></div>
+    <div class="histbox" id="histBox">
+      <div class="hb-head">
+        <label class="switch"><input type="checkbox" id="histToggle" checked><span class="track"><span class="knob"></span></span> Historic maps</label>
+        <span class="hb-name" id="histName"></span>
+      </div>
+      <div class="hb-fade"><span>Today</span><input type="range" id="histOpacity" min="0" max="100" value="100" aria-label="Blend between the historic map and today's map"><span>Then</span></div>
+      <div class="hb-years" id="histYears" aria-label="Jump to a map year"></div>
+      <p class="small muted hb-note" id="histNote"></p>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="legend small muted">
+      <span><i class="lg on"></i>Standing / happening</span>
+      <span><i class="lg ghost"></i>Gone or ended</span>
+      <span><i class="lg road"></i>Historic road</span>
+      <span><i class="lg jur"></i>Boundary that year</span>
+      <span><i class="lg seat"></i>Seat of government</span>
+    </div>
+    <div class="list" id="list"><!-- seo:inner:list --><div class="li on"><span class="li-year">1996</span><span class="li-body"><strong>Midtown Direct Launches One-Seat NY Penn Service</strong><span class="small muted">Chatham Station, Railroad Plaza, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1986</span><span class="li-body"><strong>Borough &amp; Township Vote to Unite Their Schools</strong><span class="small muted">Chatham Borough &amp; Chatham Township</span></span></div><div class="li on"><span class="li-year">1974</span><span class="li-body"><strong>Loantaka Brook Reservation Trails</strong><span class="small muted">Loantaka Way &amp; Shunpike Road, Chatham Township</span></span></div><div class="li on"><span class="li-year">1972</span><span class="li-body"><strong>The Fishawack Papers &amp; Historic District Designation</strong><span class="small muted">214 Main Street, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1960</span><span class="li-body"><strong>Great Swamp National Wildlife Refuge Defeats Jetport</strong><span class="small muted">Southern Boulevard &amp; Meyersville Road, Chatham Township</span></span></div><div class="li on"><span class="li-year">1958</span><span class="li-body"><strong>Lafayette Avenue High School Campus</strong><span class="small muted">255 Lafayette Avenue, Chatham Township</span></span></div><div class="li on"><span class="li-year">1956</span><span class="li-body"><strong>Hickory Tree Commercial Crossroads</strong><span class="small muted">Southern Boulevard &amp; Shunpike Road, Chatham Township</span></span></div><div class="li on"><span class="li-year">1946</span><span class="li-body"><strong>The Chatham Courier Founded</strong><span class="small muted">Main Street, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1936</span><span class="li-body"><strong>Chatham Emergency Squad Organized</strong><span class="small muted">31 North Passaic Avenue, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1930</span><span class="li-body"><strong>Lackawanna Overhead Electrification</strong><span class="small muted">Chatham Station, Fairmount Avenue, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1929</span><span class="li-body"><strong>Southern Boulevard School</strong><span class="small muted">192 Southern Boulevard, Chatham Township</span></span></div><div class="li on"><span class="li-year">1929</span><span class="li-body"><strong>Heyl Roses Greenhouses in Green Village</strong><span class="small muted">Green Village Road, Chatham Township</span></span></div><div class="li on"><span class="li-year">1924</span><span class="li-body"><strong>Library of the Chathams Opens on Main Street</strong><span class="small muted">214 Main Street, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1923</span><span class="li-body"><strong>Madame Bey&#x27;s Championship Boxing Camp</strong><span class="small muted">516 River Road, Chatham Township</span></span></div><div class="li on"><span class="li-year">1922</span><span class="li-body"><strong>1922 Chatham High School (Now Chatham Borough Hall)</strong><span class="small muted">54 Fairmount Avenue, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1921</span><span class="li-body"><strong>Green Village Volunteer Fire Department</strong><span class="small muted">529 Green Village Road, Chatham Township</span></span></div><div class="li on"><span class="li-year">1920</span><span class="li-body"><strong>World War I Memorial Park</strong><span class="small muted">214 Main Street, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1914</span><span class="li-body"><strong>1914 Elevated DL&amp;W Stone Railroad Station</strong><span class="small muted">Railroad Plaza &amp; Fairmount Avenue, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1914</span><span class="li-body"><strong>Lackawanna Concrete Arch Viaduct Over the Passaic</strong><span class="small muted">Passaic River rail crossing south of East Main Street, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1912</span><span class="li-body"><strong>Stanley Park &amp; Passaic River Canoeing</strong><span class="small muted">River Road &amp; Watchung Avenue at the Passaic River, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1909</span><span class="li-body"><strong>Glass Rose Greenhouses of &quot;The Rose Capital&quot;</strong><span class="small muted">Hillside Avenue, Watchung Avenue &amp; West Main Street, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1909</span><span class="li-body"><strong>Public School No. 1 (Lum Avenue / Main Street)</strong><span class="small muted">Main Street &amp; Lum Avenue, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1906</span><span class="li-body"><strong>World&#x27;s First Recorded Traffic Speed Bumps</strong><span class="small muted">Main Street crosswalks, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1905</span><span class="li-body"><strong>Ogden Memorial Presbyterian Church</strong><span class="small muted">286 Main Street at Elmwood Avenue, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1897</span><span class="li-body"><strong>Chatham Borough Incorporates &amp; The Chatham Press Launches</strong><span class="small muted">Center Street &amp; Main Street, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1897</span><span class="li-body"><strong>First Borough Council &amp; Volunteer Fire Company</strong><span class="small muted">Fairmount Avenue near Main Street, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1892</span><span class="li-body"><strong>Chatham Village Formed Inside the Township</strong><span class="small muted">Borough-wide</span></span></div><div class="li on"><span class="li-year">1887</span><span class="li-body"><strong>Dr. Swaim&#x27;s Pharmacy &amp; First Public Telephone</strong><span class="small muted">262 Main Street, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1880</span><span class="li-body"><strong>Fairview House Summer Resort Hotel</strong><span class="small muted">214 Main Street, Chatham Borough</span></span></div><div class="li on"><span class="li-year">1873</span><span class="li-body"><strong>1873 Village Chapel (Later St. Paul&#x27;s Episcopal)</strong><span class="small muted">200 Main Street, Chatham Borough</span></span></div><!-- /seo:inner:list --></div>
+  </aside>
+  <section class="mapwrap">
+    <div id="map" aria-label="Map of historic places in Chatham Borough and Chatham Township"></div>
+    <div class="map-badge" id="mapBadge"></div>
+  </section>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="data/boundary.js"></script>
+<script src="data/boundaries.js"></script>
+<script src="js/data.js"></script>
+<script src="js/landmarks-data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/explore.js"></script>
+</body>
+</html>
